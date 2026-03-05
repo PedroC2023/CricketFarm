@@ -1,8 +1,9 @@
 # Copyright (c) 2026, red and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
+from frappe import _
 
 
 class Fornecedor(Document):
@@ -25,3 +26,11 @@ class Fornecedor(Document):
 	# end: auto-generated types
 
 	pass
+
+	def on_trash(self):
+		lotes = frappe.db.count("Rececao de Lote", {"fornecedor": self.name})
+		if lotes:
+			frappe.throw(
+				_("Não é possível eliminar este Fornecedor pois tem {0} Lote(s) associado(s).").format(lotes),
+				title=_("Eliminação Bloqueada")
+			)

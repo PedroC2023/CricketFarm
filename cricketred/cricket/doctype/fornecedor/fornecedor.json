@@ -25,18 +25,11 @@
    "label": "Basic Info"
   },
   {
-   "fieldname": "nome_fiscal",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Nome",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
    "fieldname": "nif",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "NIF",
+   "length": 9,
    "read_only_depends_on": "eval: !doc.__islocal",
    "reqd": 1,
    "unique": 1
@@ -56,7 +49,8 @@
    "fieldname": "telefone",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Telefone"
+   "label": "Telefone",
+   "length": 9
   },
   {
    "fieldname": "website",
@@ -86,12 +80,19 @@
    "in_filter": 1,
    "in_list_view": 1,
    "label": "Enabled"
+  },
+  {
+   "fieldname": "nome_fiscal",
+   "fieldtype": "Data",
+   "label": "Nome",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-03 15:42:59.183378",
+ "modified": "2026-03-04 15:26:10.255942",
  "modified_by": "Administrator",
  "module": "Cricket",
  "name": "Fornecedor",
