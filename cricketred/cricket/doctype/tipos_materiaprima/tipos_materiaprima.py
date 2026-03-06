@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class Alimento(Document):
+class TiposMateriaPrima(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,12 +14,8 @@ class Alimento(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		descrição: DF.Data | None
 		enabled: DF.Check
 		nome: DF.Data
-		observação: DF.Data | None
-		tipo_materia_prima: DF.Link
-		unidade_medida: DF.Literal["kg", "g", "L", "mL", "unidade"]
 	# end: auto-generated types
 
 	pass
