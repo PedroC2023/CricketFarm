@@ -8,7 +8,6 @@
  "field_order": [
   "nova_materia_prima_section",
   "nome",
-  "column_break_lggq",
   "enabled"
  ],
  "fields": [
@@ -25,10 +24,6 @@
    "unique": 1
   },
   {
-   "fieldname": "column_break_lggq",
-   "fieldtype": "Column Break"
-  },
-  {
    "default": "1",
    "fieldname": "enabled",
    "fieldtype": "Check",
@@ -39,7 +34,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-05 15:37:18.830927",
+ "modified": "2026-03-06 09:30:33.037340",
  "modified_by": "Administrator",
  "module": "Cricket",
  "name": "Tipos MateriaPrima",

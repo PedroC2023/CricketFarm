@@ -16,6 +16,7 @@ class Alimento(Document):
 
 		descrição: DF.Data | None
 		enabled: DF.Check
+		fornecedor: DF.Link
 		nome: DF.Data
 		observação: DF.Data | None
 		tipo_materia_prima: DF.Link
